@@ -1,0 +1,12 @@
+---
+- name: Create docker network {{ name }} if not present
+  shell: |
+    [[ -z $(docker network ls -q -f name=^{{ name }}$) ]] && \
+    docker network create {{ is_attachable | ternary('--attachable', '') }} --driver {{ driver }} {{ name }}
+  when: remove == False
+
+- name: Remove docker network {{ name }} if present
+  shell: |
+    [[ $(docker network ls -q -f name=^{{ name }}$) ]] && \
+    docker network rm {{ name }}
+  when: remove

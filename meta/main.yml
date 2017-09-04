@@ -1,0 +1,6 @@
+galaxy_info:
+  author: Mario Vejlupek
+  description: Create Docker Network
+  license: MIT
+  min_ansible_version: 1.2
+dependencies: []

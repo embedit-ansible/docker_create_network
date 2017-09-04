@@ -1,0 +1,20 @@
+---
+- hosts: localhost
+  gather_facts: no
+  roles:
+  
+    - role: ../..
+      name: test_network_name
+      driver: bridge
+    - role: ../..
+      name: test_network_name
+      remove: True
+
+    - role: ../..
+      name: test_network_name_attachable
+      driver: bridge
+      is_attachable: True
+    - role: ../..
+      name: test_network_name_attachable
+      remove: True
+
