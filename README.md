@@ -30,7 +30,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - role: docker_create_network
+         - role: embedit-ansible.docker_create_network
            name: test_network
            is_attachable: True
 
