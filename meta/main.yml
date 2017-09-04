@@ -3,4 +3,8 @@ galaxy_info:
   description: Create Docker Network
   license: MIT
   min_ansible_version: 1.2
+  platforms:
+    - name: EL
+      versions:
+        - all
 dependencies: []
